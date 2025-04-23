@@ -12,6 +12,8 @@ From Datacamp's **[Analyzing Students' Mental Health](https://app.datacamp.com/l
 # Dataset Details
 **[A Dataset of Students’ Mental Health and Help-Seeking Behaviors in a Multicultural Environment](https://www.mdpi.com/2306-5729/4/3/124)** contains 268 records of depression, acculturative stress, social connectedness, and help-seeking behaviors reported by international and domestic students at an international university in Japan. In total, there are 25 categorical variables and 26 numerical variables. For a more detailed description about the dataset and the survey that produced it, please read this article: [A Dataset of Students’ Mental Health and Help-Seeking Behaviors in a Multicultural Environment](https://www.mdpi.com/2306-5729/4/3/124)
 
+Additionally, since there is no unique identifier available in the dataset, a `serial_id` column is added for this project to be used as the primary key.
+
 # Project Task
 Analyze the `students` data to see how the length of stay (`stay`) impacts the average mental health diagnostic scores of the international students present in the study.
 

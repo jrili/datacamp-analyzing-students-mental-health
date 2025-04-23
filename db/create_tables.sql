@@ -1,6 +1,7 @@
 DROP TABLE IF EXISTS students;
 
 CREATE TABLE students (
+	serial_id	SERIAL PRIMARY KEY,
 	inter_dom	TEXT,
 	region		TEXT,
 	gender		TEXT,
