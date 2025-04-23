@@ -120,9 +120,8 @@ python -m pip install -r requirements.txt
 ```
 
 # How to execute:
-_(Tested in Python 3.13)_
 
-Run notebook []
+Run notebook:  [datacamp_analyzing_students_mental_health.ipynb](https://github.com/jrili/datacamp-analyzing-students-mental-health/blob/master/datacamp_analyzing_students_mental_health.ipynb)
 
 
 # Acknowledgements
