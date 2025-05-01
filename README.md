@@ -15,7 +15,7 @@ The dataset used, taken from [A Dataset of Students’ Mental Health and Help-Se
 * Apply SQL skills to perform exploratory data analysis on real-world datasets.
 
 # Tools & Technologies Used
-* Postgres 17.4
+* Postgres 13.2
 * SQL
 * Bash
 * Jupyter Notebook
@@ -66,16 +66,20 @@ We will only need the `data.csv` file. Feel free to delete the PDF files and the
 > In case of unavailability, a snapshot of `data.csv` is also available in the data directory.
 > Date of snapshot: `2025 Apr 22`
 
-### 2. Setup PostgreSQL database service
-> [!NOTE] _Skip if already available_
-* Download installer and follow instructions here depending on your OS:
-  * For **CentOS 9**: [How to install PostgreSQL on CentOS 9 + create roles and databases](https://www.hostinger.com/tutorials/how-to-install-postgresql-on-centos)
-    * For this project, PostgreSQL 13 is used
-    * Follow the steps until you areable to connect to the psql shell
-  * Others: [PostgreSQL Downloads](https://www.postgresql.org/download/)
+### 2. Setup PostgreSQL database service _(One-time setup on server)_
+<details>
+<summary>Click to expand</summary>
 
-### 3. Setup a PostgreSQL role with CREATEROLE and CREATEDB priviliges
-> [!NOTE] _Skip if already available_
+Download installer and follow instructions here depending on your OS:
+* For **CentOS 9**: [How to install PostgreSQL on CentOS 9 + create roles and databases](https://www.hostinger.com/tutorials/how-to-install-postgresql-on-centos)
+    * For this project, **PostgreSQL 13.2** is used
+    * Follow the steps until you areable to connect to the psql shell
+* Others: [PostgreSQL Downloads](https://www.postgresql.org/download/)
+</details>
+
+### 3. Setup a PostgreSQL role with CREATEROLE and CREATEDB priviliges _(One-time setup on server)_
+<details>
+<summary>Click to expand</summary>
 
 * Switch to the `postgres` account automatically created upon PostgreSQL installation
     ```
@@ -85,7 +89,7 @@ We will only need the `data.csv` file. Feel free to delete the PDF files and the
 * Open `psql` shell
     ```
     bash-5.1$ psql
-	psql (17.4)
+	psql (13.2)
 	Type "help" for help.
     ```
 * Create a Postgres admin user with a password and `CREATEROLE` and `CREATEDB` privileges, e.g.
@@ -99,6 +103,7 @@ We will only need the `data.csv` file. Feel free to delete the PDF files and the
     postgres=# CREATE ROLE postgres_admin WITH LOGIN PASSWORD 'postgres_admin_pass' CREATEROLE CREATEDB;
 	CREATE ROLE
     ```
+</details>
 
 ### 4. Create a postgreSQL role, database, specifically for this project
 * Open `db/config.sh` from this repository
@@ -134,7 +139,7 @@ python -m pip install -r requirements.txt
 ```
 
 ## Execution Steps
-_(Tested in Python 3.13 and Postgres 17.4)_
+_(Tested in Python 3.13 and Postgres 13.2)_
 * Run notebook:  [datacamp_analyzing_students_mental_health.ipynb](https://github.com/jrili/datacamp-analyzing-students-mental-health/blob/master/datacamp_analyzing_students_mental_health.ipynb)
 
 # Key Learning Points
